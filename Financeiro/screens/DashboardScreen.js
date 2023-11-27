@@ -28,17 +28,17 @@ function DashboardScreen({navigation, route}) {
                     <Text>{login}</Text>
                     <Text>{senha}</Text>
                 </View>
-                <Botao onPress={novaTransacao}>NOVA TRANSAÇÃO</Botao>
                 <View>
-              <Text>SALDO: R${saldo.toFixed(2)}</Text>
-            </View>
-            <View>
-              <FlatList data={transacoes} 
-              keyExtractor={transacao => transacao.horario} 
-              renderItem={transacao => 
-                <Card horario={transacao.item.horario} valor={transacao.item.valor}/>
-              }/>
-            </View> 
+                    <Text>SALDO: R${saldo.toFixed(2)}</Text>
+                </View>
+                <View>
+                    <FlatList data={transacoes} 
+                    keyExtractor={transacao => transacao.horario} 
+                    renderItem={transacao => 
+                        <Card horario={transacao.item.horario} valor={transacao.item.valor}/>
+                    }/>
+                </View> 
+                <Botao onPress={novaTransacao}>NOVA TRANSAÇÃO</Botao>
             </View>
         </View>
     );
