@@ -13,9 +13,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar />
-      <Tab.Navigator initialRouteName='NovaTransacaoScreen'>
+      <Tab.Navigator initialRouteName='LoginScreen'>
         <Tab.Screen name='LoginScreen' component={LoginScreen} options={{headerTitle: ''}}/>
-        <Tab.Screen name='DashboardScreen' component={DashboardScreen} options={{headerTitle: ''}}/>
+        <Tab.Screen name='DashboardScreen' component={DashboardScreen} options={{headerTitle: 'BEM-VINDO!'}}/>
         <Tab.Screen name='NovaTransacaoScreen' component={NovaTransacaoScreen} options={{headerTitle: 'NOVA TRANSAÇÃO'}}/>
       </Tab.Navigator>
     </NavigationContainer>

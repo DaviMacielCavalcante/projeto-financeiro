@@ -3,7 +3,10 @@ import { View, Text, TextInput, StyleSheet } from "react-native";
 
 import Botao from "../components/ui/Botao";
 
-function NovaTransacaoScreen({navigation}) {
+function NovaTransacaoScreen({navigation, route}) {
+
+    const usuario = route.params.usuario;
+    const senha = route.params.senha;
 
     const [data, SetData] = useState(Date.now())
     const [tipo, SetTipo] = useState('');
@@ -18,7 +21,7 @@ function NovaTransacaoScreen({navigation}) {
     }
 
     function confirmarTransacao() {
-        navigation.navigate('DashboardScreen');
+        navigation.navigate('DashboardScreen', {usuario: usuario, senha: senha});
     }
 
     return(

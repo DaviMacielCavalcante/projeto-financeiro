@@ -7,11 +7,8 @@ function LoginScreen({navigation}) {
 
     const dados = [{
         usuario: "admin",
-        psw: 'admin',
-        despesas: {
-            
-        }
-    }]
+        senha: 'admin',
+    }]   
 
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
@@ -19,9 +16,9 @@ function LoginScreen({navigation}) {
     function criarContaHandler() {
         dados.push({
             usuario: login,
-            psw: senha
+            senha: senha
         });
-        navigation.navigate('DashboardScreen', {usuario: login, psw: senha});        
+        navigation.navigate('DashboardScreen', {usuario: login, senha: senha});        
     }
 
     function loginHandler(text) {
